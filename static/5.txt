@@ -1,0 +1,43 @@
+前情回顾
+
+1. tcp 收发消息细节
+
+   缓冲区
+   粘包
+
+2. udp套接字编程
+   服务端： socket()->bind()->recvfrom/sendto->close()
+   客户端： socket()->sendto/recvfrom->close()
+
+3. 套接字属性
+   fileno()
+   getpeername()
+   setsockopt()
+
+4. struct模块
+
+   Struct()  pack()  unpack()
+
+练习：
+编写一个服务端http程序，在客户端发起request请求时
+将网页按照http响应格式发送给浏览器展示
+
+温馨提示： 网页的内容是响应体,注意协调响应格式
+
+         对请求做一定的解析判断，如果请求内容是
+         / 则发送这个网页
+         如果是其他的则 用 404 进行响应
+
+练习： 利用httpserver程序，编写一个fork多进程程序
+，让用户既可以通过8000端口访问端应用也可以通过8080
+端口访问后端应用。
+
+作业:  1. http协议格式
+      2. fork的理解
+      3. socket 总结
+      4. 求100000以内的质数之和
+
+
+
+
+
